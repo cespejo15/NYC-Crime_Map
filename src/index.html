@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<title>NYC Shootings</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="lib/leaflet.css">
+<script src="lib/leaflet.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<script src="lib/misc.js"></script>
+</head>
+<body>
+<div id="map"></div>
+<div id="menu">
+	<div id="menu_contents">
+		<h2 class="header">NYC Shootings</h2>
+		<div id="options">
+			<div>
+				Set radius: 
+					<select id="radius">
+						<option value="10">10</option>
+						<option value="20">20</option>
+					</select>
+				</div>
+			<div>
+				Set color: 
+				<select id="time_range">
+					<option value="time_range" selected>By Time Range</option>
+					<option value="#3388ff">Set All Blue</option>
+				</select>
+				</div>
+			<div>
+				Filter by hour: 
+				<select id="hour_range">
+					<option value="" selected>All</option>
+					<option value="12AM-2:59AM">12AM-2:59AM</option>
+					<option value="3AM-5:59AM">3AM-5:59AM</option>
+					<option value="6AM-8:59AM">6AM-8:59AM</option>
+					<option value="9AM-11:59AM">9AM-11:59AM</option>
+					<option value="12PM-2:59PM">12PM-2:59PM</option>
+					<option value="3PM-5:59PM">3PM-5:59PM</option>
+					<option value="6PM-8:59PM">6PM-8:59PM</option>
+					<option value="9PM-11:59PM">9PM-11:59PM</option>
+				</select>
+				</div>
+			<div>
+				Filter by month: 
+				<select id="filter_open">
+					<option value="" selected>All</option>
+					<option value="January">January</option>
+					<option value="February">February</option>
+					<option value="March">March</option>
+					<option value="April">April</option>
+					<option value="May">May</option>
+					<option value="June">June</option>
+					<option value="July">July</option>
+					<option value="August">August</option>
+					<option value="September">September</option>
+          <option value="October">October</option>
+          <option value="November">November</option>
+          <option value="December">December</option>
+				</select>
+			</div>
+			<div>
+				Murdered? <input type="checkbox" id="N">
+		</div>
+		<div id="caption"></div>
+		<div id="status"></div>
+	</div>
+</div>
+<script src="bundle.js">/* change the src at left to app.js if you are NOT using node.js for this */</script>
+</body>
+</html>
